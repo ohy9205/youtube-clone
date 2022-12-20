@@ -16,11 +16,11 @@ const router = createBrowserRouter([
       { index: true, element: <Videos /> }, // 최상위 주소('/')에서는 Outlet에 Video컴포넌트를 보여준다
       { path: "videos", element: <Videos /> },
       {
-        path: "videos/:query", // 검색
+        path: "videos/:keyword", // 검색
         element: <Videos />,
       },
       {
-        path: "videos/watch/:id", // 비디오 상세
+        path: "videos/watch/:videoId", // 비디오 상세
         element: <VideoDetail />,
       },
     ],
