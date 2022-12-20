@@ -36,7 +36,6 @@ export default function Videos() {
       <section>
         {videos &&
           videos.map((video) => {
-            // console.log(video);
             return <VideoCard key={video.id} video={video} />;
           })}
       </section>
