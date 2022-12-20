@@ -1,10 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import VideoCard from "../components/VideoCard";
-import Youtube, { search } from "../api/youtube";
-import FakeYoutube from "../api/fakeYoutube";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 // let URL = "videos/search_bts.json";
