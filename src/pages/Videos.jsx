@@ -21,7 +21,10 @@ export default function Videos() {
       // const youtube = new FakeYoutube();// context를 이용하도록 수정
       // const youtube = new Youtube();
       // return youtube.search(keyword);
-    } //네트워크 연결 로직을 외부(Youtube.js, FakeYoutube.js)로 빼냈음(보안, 가독성 향상)
+    }, //네트워크 연결 로직을 외부(Youtube.js, FakeYoutube.js)로 빼냈음(보안, 가독성 향상)
+    {
+      staleTime: 1000 * 60,
+    }
   );
 
   if (isLoading) return <p>Loading...</p>;

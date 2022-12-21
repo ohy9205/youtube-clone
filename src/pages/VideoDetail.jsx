@@ -9,7 +9,7 @@ export default function VideoDetail() {
   } = useLocation();
   const {
     id,
-    snippet: { title, publishedAt, channelId, channelTitle, description },
+    snippet: { title, channelId, channelTitle, description },
   } = video;
 
   return (
