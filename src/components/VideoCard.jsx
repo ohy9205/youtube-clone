@@ -21,9 +21,7 @@ export default function VideoCard({ video, type }) {
       onClick={onClickHandler}>
       <img
         className={isList ? "w-60 mr-2" : "w-full"}
-        src={
-          thumbnails.maxres ? thumbnails.maxres.url : thumbnails.standard.url
-        }
+        src={thumbnails.maxres ? thumbnails.maxres.url : thumbnails.high.url}
         alt={`${title} 썸네일`}
       />
       <div>

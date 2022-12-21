@@ -21,8 +21,7 @@ export default function VideoDetail() {
           type="text/html"
           width="100%"
           height="640"
-          src={`http://www.youtube.com/embed/${id}`}
-          frameborder="0"></iframe>
+          src={`https://www.youtube.com/embed/${id}`}></iframe>
         <div className="p-8">
           <h1 className="text-xl font-bold">{title}</h1>
           <h2>
