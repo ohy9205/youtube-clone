@@ -12,7 +12,7 @@ function App() {
       <SearchBar />
       <YoutubeApiProvider>
         <QueryClientProvider client={queryClient}>
-          <div className="flex py-6">
+          <div className="flex">
             <NavBar />
             <Outlet />
           </div>

@@ -19,10 +19,10 @@ export default function SearchBar() {
   };
 
   return (
-    <header className="p-4 text-2xl border-b border-zinc-600 mb-4">
+    <header className="p-4  border-b border-zinc-600">
       <form className="flex justify-center " onSubmit={onSubmitHandler}>
         <input
-          className="w-7/12 p-2 outline-none bg-black text-gray-500 rounded-l-md"
+          className="w-5/12 p-2 outline-none bg-black text-gray-300 rounded-l-md"
           type="text"
           value={keyword}
           onChange={onChangeHandler}

@@ -20,7 +20,6 @@ export default function RelatedVideos({ id }) {
 
   return (
     <aside>
-      <h1>related</h1>
       {videos && (
         <ul>
           {videos.map((video) => (

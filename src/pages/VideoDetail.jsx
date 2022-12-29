@@ -13,8 +13,8 @@ export default function VideoDetail() {
   } = video;
 
   return (
-    <section className="flex flex-col lg:flex-row">
-      <article className="basis-4/6">
+    <section className="flex flex-col lg:flex-row p-6 max-w-7xl m-auto">
+      <article className="basis-8/12">
         <iframe
           title={title}
           id="player"
@@ -29,9 +29,8 @@ export default function VideoDetail() {
           </h2>
           <pre className="whitespace-pre-wrap">{description}</pre>
         </div>
-        <div>{/* 사진 */}</div>
       </article>
-      <section className="basis-2/4">
+      <section className="basis-4/12">
         <RelatedVideos id={id} />
       </section>
     </section>

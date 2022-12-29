@@ -36,18 +36,14 @@ export default function Videos() {
   if (error) return <p>{error.message}</p>;
 
   return (
-    <div>
-      Videos🔥 {keyword}
-      <section>
-        {videos && (
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 gap-y-4">
-            {videos.map((video) => {
-              // console.log(video);
-              return <VideoCard key={video.id} video={video} />;
-            })}
-          </ul>
-        )}
-      </section>
-    </div>
+    <section className="p-8 max-w-7xl m-auto">
+      {videos && (
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10">
+          {videos.map((video) => {
+            return <VideoCard key={video.id} video={video} />;
+          })}
+        </ul>
+      )}
+    </section>
   );
 }
