@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoLogoYoutube } from "react-icons/io";
 
+const BASE_TO = "/videos/category";
 export default function NavBar() {
   return (
     <section className="flex flex-col gap-5 w-7/12">
@@ -11,16 +12,16 @@ export default function NavBar() {
       </Link>
       <nav>
         <ul className="flex flex-col justify-center text-xl">
-          <Link to="/videos/category/10">
+          <Link to={BASE_TO + "/10"}>
             <li>Music</li>
           </Link>
-          <Link to="/videos/category/24">
+          <Link to={BASE_TO + "/24"}>
             <li>Entertainment</li>
           </Link>
-          <Link to="/videos/category/26">
+          <Link to={BASE_TO + "/17"}>
             <li>Howto & Style</li>
           </Link>
-          <Link to="/videos/category/25">
+          <Link to={BASE_TO + "/25"}>
             <li>News & Politics</li>
           </Link>
         </ul>
