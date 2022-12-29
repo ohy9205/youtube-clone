@@ -29,13 +29,13 @@ export default function SearchBar() {
         className="flex justify-center flex-grow"
         onSubmit={onSubmitHandler}>
         <input
-          className="w-7/12 p-2 border border-zinc-400 outline-none dark:bg-black dark:text-gray-300 rounded-l-md"
+          className="w-7/12 p-2 bg-zinc-200 outline-none dark:border-none dark:bg-black dark:text-gray-300 rounded-l-md"
           type="text"
           value={keyword}
           onChange={onChangeHandler}
           placeholder="Search..."
         />
-        <button className="border border-zinc-400 bg-zinc-400 dark:bg-zinc-600 p-4 rounded-r-md">
+        <button className="  bg-zinc-400 dark:bg-zinc-600 dark:border-none p-4 rounded-r-md">
           <BiSearch />
         </button>
       </form>
