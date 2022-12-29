@@ -7,6 +7,7 @@ export default class YoutubeClient {
       baseURL: "https://www.googleapis.com/youtube/v3",
       params: {
         key: process.env.REACT_APP_YOUTUBE_API_KEY,
+        regionCode: "KR",
       },
     });
   }

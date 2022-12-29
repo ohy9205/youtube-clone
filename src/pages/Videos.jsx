@@ -6,17 +6,22 @@ import { useYoutubeApi } from "../context/YoutubeApiContext";
 
 // let URL = "videos/search_bts.json";
 export default function Videos() {
-  const { keyword } = useParams();
+  const { keyword, categoryId } = useParams();
+  const params = useParams();
   const { youtube } = useYoutubeApi();
+
+  const isCategory = !!params.categoryId;
 
   const {
     isLoading,
     error,
     data: videos,
   } = useQuery(
-    ["videos", keyword],
+    ["videos", isCategory ? `category/${categoryId}` : keyword],
     () => {
-      return youtube.search(keyword);
+      return isCategory
+        ? youtube.category(categoryId)
+        : youtube.search(keyword);
 
       // const youtube = new FakeYoutube();// context를 이용하도록 수정
       // const youtube = new Youtube();
@@ -35,7 +40,7 @@ export default function Videos() {
       Videos🔥 {keyword}
       <section>
         {videos && (
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 gap-y-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 gap-y-4">
             {videos.map((video) => {
               // console.log(video);
               return <VideoCard key={video.id} video={video} />;

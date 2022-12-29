@@ -18,6 +18,11 @@ export default class Youtube {
       .then((res) => res.data.items[0].snippet.thumbnails.default.url);
   }
 
+  async category(categoryId) {
+    console.log(categoryId);
+    return this.#categoryByid(categoryId);
+  }
+
   async #searchByKeyword(keyword) {
     return this.apiClient
       .search({
@@ -40,6 +45,19 @@ export default class Youtube {
           part: "snippet",
           maxResults: "25",
           chart: "mostPopular",
+        },
+      })
+      .then((res) => res.data.items);
+  }
+
+  async #categoryByid(categoryId) {
+    return this.apiClient
+      .videos({
+        params: {
+          part: "snippet",
+          maxResults: "50",
+          chart: "mostPopular",
+          videoCategoryId: categoryId,
         },
       })
       .then((res) => res.data.items);
