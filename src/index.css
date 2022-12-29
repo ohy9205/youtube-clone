@@ -18,6 +18,11 @@ body {
 
 #root {
   @apply w-full max-w-screen-2xl;
+  height: 100vh;
+}
+
+nav ul li {
+  @apply w-full border-b px-8 py-6;
 }
 
 code {

@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         path: "videos/watch/:videoId", // 비디오 상세
         element: <VideoDetail />,
       },
+      {
+        path: "videos/category/:categoryId", // 카테고리
+        element: <Videos />,
+      },
     ],
   },
 ]);
