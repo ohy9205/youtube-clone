@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { BiSearch } from "react-icons/bi";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import { useDarkMode } from "../context/DarkModeContext";
@@ -16,7 +16,6 @@ export default function SearchBar() {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    // 라우팅
     navigate(`/videos/${keyword}`);
     setKeyword("");
   };
