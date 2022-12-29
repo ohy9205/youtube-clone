@@ -18,7 +18,6 @@ export default function RelatedVideos({ id }) {
 
   if (isLoading) return <p>Loading...</p>;
 
-  console.log(videos);
   return (
     <aside>
       <h1>related</h1>
