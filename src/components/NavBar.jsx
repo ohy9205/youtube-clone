@@ -7,7 +7,7 @@ export default function NavBar() {
   return (
     <section className="flex flex-col border-r border-zinc-700 ">
       <Link to="/" className="flex items-center justify-center py-8">
-        <IoLogoYoutube className="text-xl md:text-3xl text-brand" />
+        <IoLogoYoutube className="text-xl lg:text-3xl text-brand" />
         <h1 className="font-bold ml-2 text-xl lg:text-3xl">YouTube</h1>
       </Link>
       <nav>
