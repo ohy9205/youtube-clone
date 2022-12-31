@@ -17,7 +17,7 @@
 - react-icons
 
 ## 사용
-
+> 사전조건: friebase API사용에 필요한 configure설정 정보가 필요함
 ```js
 npm install
 npm start
