@@ -1,12 +1,12 @@
 # 유튜브 클론코딩
-데이터 패칭을 연습하기 위해 유튜브 사이트를 클론코딩했다. <br>
-axios를 사용한 네트워크 통신법을 익히고 react query를 경험해보기 위해 진행한 프로젝트이므로 UI유사성 보다는 기능 구현에 집중했다.
+- 네트워크 통신, 데이터 패칭, API 활용법 등을 연습하기 위해 진행한 클론 코딩 프로젝트.
+- `axios`, `react-query`, `api활용` 등을 경험하기 위해 진행했기 때문에 UI유사성 보다는 해당 기술을 사용한 기능 구현에 집중함.
 
-> URL:
+> URL: https://clone-75a0d.web.app/
 
 
 ## 기능
-- [x] 카테고리 별 영상 리스트를 불러올 수 있다.
+- [x] 카테고리 별 영상 리스트를 불러온다.
 - [x] 연관된 동영상 목록을 불러온다.
 - [x] 영상의 채널 정보와 이미지를 가져온다.
 - [x] 다크모드 테마로 변경할 수 있다.
@@ -30,12 +30,23 @@ npm install
 npm start
 ```
 
-## 회고
-생각한 기능 구현은 완료했지만 어느 프로젝트에서나 그렇듯 역시나 개선하고 고민해볼 부분이 생겼다. <br>
-### 카테고리별 라우팅 문제
-youtube API에서는 카테고리별로 동영상 리스트를 들고오려면 카테고리 id를 알아야 한다.   
+## 라우팅
+```js
+<App>
+  / 👉 <Videos>
+  /videos 👉 <Videos>
+  /videos/:keyword 👉 <Videos>
+  /videos/category/:categoryId👉 <Videos>
+  /videos/watch/:videoId 👉 <VideoDetail>
+  /잘못된경로 👉 <NotFound>
+```
 
-지금은 카테고리에 `Link`처리를 하고 path마다 카테고리 id를 일일이 적어주었는데 (ex. `/videos/category/24`), 문제는 이렇게하면 카테고리가 추가될 때마다 id를 직접 알아내야하고, id가 바뀔때마다 수기로 변경해야하는 등 유지보수가 굉장히 힘들어 질 것이다.   
+## 2. 동영상 리스트 조회
+![유튜브1](https://user-images.githubusercontent.com/78143860/212106695-ad4c7c1f-ea2f-410f-b57a-077e2fcb0eee.gif)
 
-막연한 생각으론 유튜브에서 제공하는 category관련 API를 이용하면 이부분을 효율적으로 개선시킬 수 있을 거 같은데 고민이 더 필요할 것 같다.
+![유튜브3](https://user-images.githubusercontent.com/78143860/212106815-4f6a1b39-01ed-4b9f-a748-a84808553ada.gif)
 
+
+## 3. 상세 페이지
+
+![유튜브2](https://user-images.githubusercontent.com/78143860/212106739-9b0275e0-8d06-4dbf-b0fb-6deb7237ae53.gif)
